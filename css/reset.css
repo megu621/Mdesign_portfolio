@@ -23,7 +23,7 @@ li {
   /* サイト全体の文字色　黒は真っ黒にしない */
   color: #3f2518;
   /* 優先順位、どの端末でも対応できるように複数指定、全てない場合サンセリフになる、分からなければ指定方法で検索 */
-  font-family: "Futura", "Trebuchet MS", "Arial", "sans-serif",
+  font-family: "Futura PT", "Trebuchet MS", "Arial", "sans-serif",
     "Zen Kaku Gothic New", "sans-serif","Shippori Mincho";
   scroll-behavior: smooth;
 

@@ -6,10 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mdesign_portfolio</title>
   <meta name="description" content="mdesign,portfolio">
-  
+
   <link rel="stylesheet" href="https://use.typekit.net/yih6jum.css">
   <link rel="stylesheet" href="https://use.typekit.net/yih6jum.css">
   <script>
+    (function(d) {
+    var config = {
+      kitId: 'yih6jum',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
     (function (d) {
       var config = {
         kitId: 'yih6jum',
@@ -35,26 +43,25 @@
 </head>
 
 <body>
-  <header class="page-header">
+  <header class="page_header">
     <h1 class="logo">
-      <img src="./images/Mdesign_pc.svg" alt="mdesign-logo">
-      <img class="flower" src="./images/logo_flower_pc.svg" alt="flower-logo">
-      <img src="./images/logo_flower_sp.svg" alt="">
+      <img src="./images/h1-logo_1.png" alt="mdesign-logo">
+      <img class="flower" src="./images/h1-logo_2.png" alt="flower-logo">
     </h1>
 
-    <nav>
-      <ul class="main-nav">
+    <nav class="pc_nav">
+      <ul>
         <li><a href="#index.html">Home</a></li>
         <li><a href="#about.html">About</a></li>
         <li><a href="#works.html">Works</a></li>
         <li><a href="#contact.html">Contact</a></li>
         <li>
-          <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+          <a href="#" target="_blank" rel="noopener noreferrer">
             <img src="./images/portfolio_img/instagram_pc.svg" alt="Instagram" width="30" height="30"></a>
         </li>
         <li>
           <a href="#" target="_blank" rel="noopener noreferrer">
-            <img src="./images/portfolio_img/x_pc.svg" alt=""></a>
+            <img src="./images/portfolio_img/x_pc.svg" alt="X"></a>
         </li>
       </ul>
     </nav>
@@ -63,25 +70,28 @@
       <span></span>
     </nav>
 
-    <nav class="sp-nav">
+    <nav class="sp_nav">
       <ul>
-        <li><a href="#index.html"></a></li>
-        <li><a href="#about.html"></a></li>
-        <li><a href="#works.html"></a></li>
-        <li><a href="#contact.html"></a></li>
+        <li><a href="#index.html"></a>Home</li>
+        <li><a href="#about.html"></a>About</li>
+        <li><a href="#works.html"></a>Works</li>
+        <li><a href="#contact.html"></a>Contact</li>
       </ul>
     </nav>
   </header>
 
-  <div class="mv">
+  <div class="mainvisual">
     <picture>
-      <source srcset="./images/mv_sp.jpg" media="(max-width:767px)">
+      <source srcset="./images/sp_mv.jpg" media="(max-width:767px)">
       <img src="./images/mv_pc.jpg" alt="ガーベラ">
     </picture>
-    <p class="page-title">「言葉を繋ぎ、<br>想いをカタチに」</p>
+    <p class="mv_text">「言葉を繋ぎ、<br>想いをカタチに」</p>
   </div>
 
   <main>
+    <section id="about">
+      <h2 class="page_title"><span class="color_change">A</span>bout</h2>
+    </section>
 
   </main>
 
