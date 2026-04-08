@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+body {
+  background: #FBFBFD;
+}
+
+.page-header {
+  width: 100%;
+}
+
+.page-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 360px;
+  margin: 40px;
+  position: relative;
+}
+
+.flower {
+  position: absolute;
+  top: 23px;
+  left: 13px;
+}
+.main-nav {
+  display: flex;
+  gap: 46px;
+}
+
+/* .main-nav li a img {
+  width: 30px;
+  height: 30px;
+} */
+
+.mv img {
+  width: 100%;
+}
+
+.mv {
+  position: relative;
+}
+
+.page-title {
+  position: absolute;
+  top: 42%;
+  left: 7%;
+  font-family: 'shippori Mincho',serif;
+  font-size: 40px;
+  line-height: 2;
+}
+
+
+@media screen and (max-width: 767px) {
+  .logo img,
+  .flower {
+    width: 70%;
+  }
+}
