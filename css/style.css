@@ -8,14 +8,16 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 3%;
 }
 
 .logo {
+  max-width: 100%;
   position: relative;
 }
 
 .logo img {
-  width: 128px;
+  width: 136px;
   padding: 30px 50px 30px;
 }
 
@@ -25,6 +27,8 @@ body {
   top: 18px;
   left: 0;
 }
+
+/* ulにgap? */
 .pc_nav ul {
   display: flex;
   gap: 46px;
@@ -35,40 +39,46 @@ body {
   height: 30px;
 }
 
+.pc_nav a {
+  font-size: 16px;
+}
+
 .sp_nav {
   display: none;
 }
 
-.mainvisual img {
+.mainvisual {
   max-width: 100%;
+  position: relative;
 }
 
-.mainvisual {
-  position: relative;
+.mainvisual img {
+  width: 100%;
 }
 
 .mv_text {
   position: absolute;
   top: 42%;
-  left: 7%;
+  left: 15%;
   font-family: 'shippori Mincho',serif;
   font-size: 40px;
   line-height: 2;
 }
 
-.page_title {
+h2 {
   font-family: "futura-pt", sans-serif;
   font-weight: 500;
-  font-style: normal;
+  font-style: medium;
   font-size: 40px;
 }
 
 section {
   max-width: 1000px;
-  margin: 0 auto;
+  padding: 0 5%;
+  margin: 150px auto 0;
 }
 
-h2 {
+.page_title {
   text-align: center;
 }
 
@@ -76,18 +86,356 @@ h2 {
   color: #9B7C8C;
 }
 
+.page_title img {
+  width: 50px;
+}
+
+.about_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px auto;
+}
+
+.about_box img {
+  width: 150px;
+}
+
+.about_text,
+.contact_text p,
+.contact_btn a {
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 2;
+}
+
+.img_line {
+  max-width: 100%;
+  margin-top: 150px;
+  /* contact(タイトル)まで */
+  margin-bottom: 224px;
+}
+
+.img_line img {
+  width: 100%;
+}
+
+.works_btn_box {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px 0;
+}
+
+.works_btn_box a {
+  width: 64px;
+  padding: 8px 32px;
+  border-radius: 20px;
+  color: #FBFBFD;
+  background: #D4ADA2;
+  font-family: "futura pt";
+  font-size: 16px;
+  display: inline-block;
+  text-align: center;
+}
+
+.works_img_area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  margin: 50px auto;
+}
+
+.img_box {
+  border: 1px solid #D4ADA2;
+  width: 30%;
+  height: auto;
+  padding: 20px;
+  box-sizing: border-box;
+
+}
+
+.img_box img {
+  width: 100%;
+  object-fit: contain;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_text {
+  text-align: center;
+  margin: 50px auto;
+}
+
+.contact_text p {
+  line-height: 2;
+}
+
+.contact_btn {
+  background: #D4ADA2;
+  border-radius: 50px;
+  padding: 18px 80px;
+  color: #FBFBFD;
+  margin-bottom: 256px;
+}
+
+.contact_text a {
+  display: inline-block;
+  margin-top: 64px;
+}
+
+#contact {
+  position: relative;
+}
+
+.hanabira1 {
+  position: absolute;
+  top: -30%;
+  left: -10%;
+}
+
+.hanabira2 {
+  position: absolute;
+  top: 40%;
+  right: -10%;
+}
+
+footer {
+  max-width: 100%;
+  margin-top: 160px;
+  background: #D4ADA2;
+}
+
+.footer_nav_pc {
+  padding: 176px 0;
+  /* 中央にこない */
+  /* text-align: center; */
+  max-width: 100%;
+}
+
+.footer_nav_pc ul {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  /* padding: 0;
+  margin: 0; */
+}
+
+.footer_nav_pc li {
+  color: #FBFBFD;
+  width: calc(20% - 20px);
+  text-align: center;
+  /* padding: 0;
+  margin: 0; */
+}
+
+.footer_img {
+  width: 100%;
+}
+
+.copyright {
+  color: #fbfbfd;
+  text-align: center;
+  padding: 48px 0 72px; 
+}
+/*== 線の上を別の線が伸びる */
+
+.btnlinestretches4{
+    /*線の基点とするためrelativeを指定*/
+	position:relative;
+    /*リンクの形状*/ 
+	color:#333;
+    padding: 10px 50px 10px 30px;
+	display:inline-block;
+    text-decoration: none;
+    outline: none;
+}
+
+/*線の設定*/
+.btnlinestretches4::before,
+.btnlinestretches4::after{
+	content:'';
+    /*絶対配置で線の位置を決める*/
+	position:absolute;
+	z-index:1;
+	bottom:0;
+	left:0;
+     /*線の形状*/   
+	background:#333;
+	width:100%;
+	height:2px;
+    /*アニメーションの指定*/
+	transition:all 0.3s ease-in-out;
+}
+
+ /*hover時に伸びる線の形状*/   
+.btnlinestretches4::after{
+	width:0;
+	background:#ccc;
+}
+
+ /*hover時に100%に伸びる*/   
+.btnlinestretches4:hover::after {
+	width:100%;
+}
+
+ /*円の設定*/   
+.btnlinestretches4 span::after {
+    content: '';
+    /*絶対配置で矢印の位置を決める*/
+    position: absolute;
+    top: 1em;
+    right: 20px;
+    /* 円 */
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #3F2518;
+    /*矢印の形状*/   
+    /* width: 5px;
+    height: 5px; */
+    /* border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    transform: rotate(45deg); */
+    /*アニメーションの指定*/
+    transition: all .3s;
+}
+
+/* 短い線の設定 */
+.btnlinestretches4 span::before {
+  content: '';
+  position: absolute;
+  top: 1.2em;
+  right: 30px;
+  width: 10px;
+  height: 1px;
+  background: #3F2518;
+}
+
+.btnlinestretches4 
+.btnlinestretches4 span::after
+.btnlinestretches4 span::before {
+  align-items: center;
+}
+/*hover時に矢印が移動*/   
+.btnlinestretches4:hover span::after {
+	right:15px;
+}
+/* 右に寄せる */
+.view {
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1100px) {
+  .work_img_area {
+    flex-direction: column;
+  }
+
+  .img_box {
+    width: 100%;
+  }
+  
+  .img_line {
+    margin-bottom: 0;
+  }
+
+  .contact_img_area {
+    display: none;
+  }
+
+  .contact_btn {
+      margin-bottom: 0;
+  }
+  .footer_nav_pc {
+    padding: 160px 0;
+  }
+
+  .footer_nav_pc ul {
+    flex-direction: column;
+    margin: 0 auto;
+  }
+  .pc_nav {
+  display: none;
+}
+.sp_btn {
+  display: block;
+  height: 27px;
+  cursor: pointer;
+  position: absolute;
+  top: 34px;
+  right: 27px;
+  z-index: 2;
+}
+.sp_btn span {
+  display: block;
+  width: 40.5px;
+  height: 2px;
+  border-radius: 2px;
+  background: #3F2518;
+  position: relative;
+  top: 13.5px;
+  transition: 0.3s;
+}
+.sp_btn span::before,
+.sp_btn span::after {
+  content:"";
+  display: block;
+  width: 40.5px;
+  height: 2px;
+  border-radius: 2px;
+  background: #3F2518;
+  position: absolute;
+  transition: 0.3s;
+}
+.sp_btn span::before {
+  bottom: 13.5px;
+}
+.sp_btn span::after {
+  top: 13.5px;
+}
+/* バツ印 */
+.sp_btn.open span {
+  background: transparent;
+}
+.sp_btn.open span::before {
+  bottom: 0;
+  transform: rotate(45deg);
+}
+.sp_btn.open span::after {
+  top: 0;
+  transform: rotate(-45deg);
+  /* -135でもよい */
+}
+}
 
 @media screen and (max-width: 767px) {
   .mainvisual img {
     height: auto;
+    max-width: 100%;
   }
 
-  .logo img {
-    width: 70%;
+  .logo {
+    max-width: 50%;
+    margin: 0 auto;
   }
 
   .mv_text {
     font-size: 32px;
     color: #FBFBFD;
   }
+
+  .about_box {
+    flex-direction: column;
+  }
+
+  .about_box img {
+    display: none;
+  }
+
+  .pc_nav {
+    display: none;
+  }
+
 }
