@@ -328,6 +328,10 @@ footer {
   justify-content: flex-end;
 }
 
+
+/* about */
+
+
 @media screen and (max-width: 1100px) {
   .work_img_area {
     flex-direction: column;
