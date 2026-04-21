@@ -185,6 +185,16 @@ h5 {
   top: 95%;
 }
 
+.font {
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #3F2518;
+  position: absolute;
+  top: 95%;
+
+}
+
 .contact_text {
   text-align: center;
   margin: 50px auto;
@@ -435,6 +445,66 @@ footer {
   padding-bottom: 0;
 }
 
+/* works_website1_page */
+.wrapper {
+  text-align: center;
+}
+
+.website1_style {
+  display: flex;
+  justify-content: center;
+  gap: 47px;
+  align-items: flex-start;
+}
+
+.works_menu {
+  margin: 0 auto;
+}
+
+.works_title {
+  margin: 108px auto 16px;
+}
+
+th {
+  font-size: 24px;
+  font-weight: 400;
+  color: #3F2518;
+}
+
+td {
+  font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: 3F2518
+}
+
+th,
+td {
+  border-bottom: 1px solid #D4ADA2;
+  width: 400px;
+  padding-top: 100px;
+}
+
+/* 文字を中央に置きたい */
+tr,
+th,
+td {
+  text-align: center;
+  vertical-align: middle;
+}
+
+.font-style {
+  font-family: "futura-pt", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #3F2518;
+}
+
+/* 左揃えにならない */
+.works_title {
+  text-align: left;
+}
+
 
 @media screen and (max-width: 1100px) {
   .page_header {
@@ -448,12 +518,26 @@ footer {
 }
 
 
-  .work_img_area {
+
+  .works_img_area {
+    display: flex;
     flex-direction: column;
   }
   
-  .works_img_area picture {
+  .works_img_area .style {
     width: 100%;
+  }
+
+  .works_img_area img {
+    width: 100%;
+  }
+
+  .sp {
+    display: inline-block;
+  }
+
+  h5 {
+    top: 100%;
   }
 
   .img_line {
@@ -483,9 +567,14 @@ footer {
   display: none;
 }
 
-.works_page .pc {
+.works_page .sp {
   display: flex;
   flex-direction: column;
+}
+
+.website1_style {
+  flex-direction: column;
+  align-items: center;
 }
 
 
