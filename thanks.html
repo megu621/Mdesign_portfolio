@@ -61,6 +61,12 @@
 
 </head>
 
+<script type="text/javascript">
+  let submittde = false;
+</script>
+<iframe name="hidden_iframe" id="hidden_iframe" style="display: none"
+  onload="if(submitted){window.location='https://docs.google.com/forms/d/e/1FAIpQLSfXC5yP16YnvrGlH_ngBznvFfbVm920QdunEkInhts0wWicoA/viewform?usp=publish-editor'}"></iframe>
+
 <body>
   <header class="page_header">
     <h1 class="logo">
@@ -99,54 +105,18 @@
     </nav>
   </header>
   <main>
-    <section id="contact">
+    <section>
       <div class="page_title">
         <h2><span class="color_change">C</span>ntact</h2>
-        <h3 class="sub_title">お問い合わせ</h3>
         <img src="./images/section_logo_flower.svg" alt="ガーベラ">
       </div>
-      <div class="contact_page">
-        <p class="contact_page_text">
-          お問い合わせはこちらからお願いいたします。<br>内容を確認後メールアドレス宛にご連絡いたします。
-        </p>
-        <div class="form_area">
-          <form
-            action="https://docs.google.com/forms/d/e/1FAIpQLSfXC5yP16YnvrGlH_ngBznvFfbVm920QdunEkInhts0wWicoA/viewform?usp=publish-editor"
-            method="POST"></form>
-
-
-          <div class="form_box">
-            <div class="form">
-              <label for="name">お名前</label>
-              <input type="text" id="name" name="entry.22399399" class="form_area" placeholder="花山 花子" required>
-            </div>
-            <div class="form form_style">
-              <label for="email">メールアドレス</label>
-              <input type="email" id="email" name="entry.2053208848" class="form_area" placeholder="example@email.com"
-                required>
-            </div>
-          </div>
-
-          <div class="form_box">
-            <div class="form form_style2">
-              <label for="name">フリガナ</label>
-              <input type="text" id="name" name="entry.1012604389" class="form_area" placeholder="ハナヤマ ハナコ" required>
-            </div>
-            <div class="form">
-              <label for="tel">電話番号（ハイフンなし）</label>
-              <input type="tel" id="tel" name="entry.963376207" class="form_area" placeholder="00000000000" required>
-            </div>
-          </div>
-        </div>
-        <div class="form_box2">
-          <div class="form">
-            <label for="name">お問い合わせ</label>
-            <input type="text" id="name" name="entry.549670638" class="form_area" placeholder="お問い合わせ内容を入力してください"
-              required>
-          </div>
-        </div>
-        <div class="contact_text">
-          <a href="thanks.html" class="contact_btn2">送信する</a>
+      <div class="thanks_page">
+        <form
+          action="https://docs.google.com/forms/d/e/1FAIpQLSfXC5yP16YnvrGlH_ngBznvFfbVm920QdunEkInhts0wWicoA/viewform?usp=publish-editor"
+          method="POST" target="hidden_iframe" onsubmit="submitted=true;" class="form_area"></form>
+        <div class="thanks_page_text">
+          <p>送信完了</p>
+          <p class="thanks_text">お問い合わせありがとうございます。<br>内容を確認後メールアドレス宛にご連絡いたします。</p>
         </div>
       </div>
     </section>
