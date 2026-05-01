@@ -43,8 +43,13 @@ body {
   font-size: 16px;
 }
 
+/* スマホ版メニュー */
 .sp_nav,
 .sp_btn {
+  display: none;
+}
+
+.sp {
   display: none;
 }
 
@@ -174,9 +179,6 @@ section {
   align-items: center;
 }
 
-.sp {
-  display: none;
-}
 
 h5 {
   font-family: "futura-pt", sans-serif;
@@ -211,7 +213,9 @@ h5 {
   border-radius: 50px;
   padding: 18px 80px;
   color: #FBFBFD;
-  margin-bottom: 256px;
+  margin: 64px 0 256px;
+  border: none;
+  cursor: pointer;
 }
 
 .contact_text a {
@@ -605,7 +609,7 @@ td {
 }
 
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 767px) {
   .page_header {
     margin-top: 100px auto 0;
   }
@@ -630,10 +634,6 @@ td {
 
   .works_img_area img {
     width: 100%;
-  }
-
-  .sp {
-    display: inline-block;
   }
 
   h5 {
@@ -710,23 +710,60 @@ td {
 }
 .sp_btn span::before {
   bottom: 13.5px;
+  /* background: #FAFAFA; */
+
 }
 .sp_btn span::after {
   top: 13.5px;
+  /* background: #FAFAFA; */
 }
 /* バツ印 */
+/* transparent=透明 */
 .sp_btn.open span {
   background: transparent;
 }
 .sp_btn.open span::before {
   bottom: 0;
   transform: rotate(45deg);
+  background: #FAFAFA;
+
 }
 .sp_btn.open span::after {
   top: 0;
   transform: rotate(-45deg);
   /* -135でもよい */
+  background: #FAFAFA;
+
 }
+
+/* メニューの見た目 */
+.sp_nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* %にすると全体に対してになるためvh（表示されている高さの意）にする */
+  height: 100vh;
+  background: #D4ADA2;
+  z-index: 1;
+}
+
+.sp_nav ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 48px;
+}
+
+.sp_nav li {
+  color: #FAFAFA;
+  font-size: 14px;
+  font-family: "futura-pt", sans-serif;
+  font-style: medium;
+}
+
 
 .about_page-about_box img {
   display: none;
@@ -736,7 +773,10 @@ td {
   margin: 0 auto;
 }
 
-
+/* sp_menu */
+.sp_menu_header {
+  height: 100vh;
+  background: #D4ADA2;
 }
 
 @media screen and (max-width: 767px) {
@@ -773,9 +813,6 @@ td {
     display: none;
   }
 
-  .pc_nav {
-    display: none;
-  }
 
 /* about_page */
   .skill_container {
