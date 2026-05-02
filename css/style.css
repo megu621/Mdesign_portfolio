@@ -628,11 +628,13 @@ td {
     flex-direction: column;
   }
   
+  /* 画像が出ない */
   .works_img_area .style {
     width: 100%;
+    height: none;
   }
 
-  .works_img_area img {
+  .works_img_area .style img {
     width: 100%;
   }
 
