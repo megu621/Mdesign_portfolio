@@ -136,7 +136,7 @@
         </p>
       </div>
       <div class="view">
-        <a href="#" class="btnlinestretches4"><span>view more</span></a>
+        <a href="about.html" class="btnlinestretches4"><span>view more</span></a>
       </div>
     </section>
 
@@ -149,45 +149,62 @@
         <h2><span class="color_change">W</span>orks</h2>
         <img src="./images/section_logo_flower.svg" alt="ガーベラ">
       </div>
-      <div class="works_btn_box">
-        <a href="#" class="works_btn">ALL</a>
+      <!-- <div class="works_btn_box">
+        <a href="works_all.html" class="works_btn">ALL</a>
         <a href="#" class="works_btn">WEB SITE</a>
         <a href="#" class="works_btn">BANNER</a>
-      </div>
+      </div> -->
       <div class="works_img_area">
         <div class="style">
-          <img src="./images/website_top_1x.jpg" class="pc" alt="workers">
-          <img src="./images/website_top_2x.jpg" class="sp" alt="workers">
+          <a href="works_website1.html" target="_blank" rel="noopener noreferrer">
+            <img src="./images/workers_top1.jpg" class="pc" alt="workers">
+            <img src="./images/website_top_2x.jpg" class="sp" alt="workers">
+          </a>
           <h5>WORKERS</h5>
         </div>
+
         <div class="style">
-          <img src="./images/website2_1_1x.jpg" class="pc" alt="hair-design">
-          <img src="./images/website2_3_2x.jpg" class="sp" alt="hair-design">
+          <a href="works_website2.html" target="_blank" rel="noopener noreferrer">
+            <img src="./images/website2_1_1x.jpg" class="pc" alt="hair-design">
+            <img src="./images/website2_3_2x.jpg" class="sp" alt="hair-design">
+          </a>
           <h5>hair-design</h5>
         </div>
+
         <div class="style">
-          <img src="./images/banner1_1phon_1x.jpg" class="pc" alt="phon">
-          <img src="./images/banner1_3phon2x.jpg" class="sp" alt="phon">
+          <a href="works_banner1.html" target="_blank" rel="noopener noreferrer">
+            <img src="./images/banner1_1phon_1x.jpg" class="pc" alt="phon">
+            <img src="./images/banner1_3phon2x.jpg" class="sp" alt="phon">
+          </a>
           <h5 class="font">スマホ学割</h5>
         </div>
+
         <div class="style">
-          <img src="./images/banner2_1ice_1x.jpg" class="pc" alt="ice">
-          <img src="./images/banner2_3ice_2x.jpg" class="sp" alt="ice">
-          <h5>ICE CREAM</h5>
+          <a href="works_banner2.html" target="_blank" rel="noopener noreferrer">
+            <img src="./images/banner2_1ice_1x.jpg" class="pc" alt="ice">
+            <img src="./images/banner2_3ice_2x.jpg" class="sp" alt="ice">
+          </a>
+          <h5 class="font">ICE CREAM</h5>
         </div>
+
         <div class="style">
-          <img src="./images/banner3_1burger_1x.jpg" class="pc" alt="humberger1">
-          <img src="./images/banner3_3burger_2x.jpg" class="sp" alt="humberger1">
+          <a href="works_banner3.html" target="_blank" rel="noopener noreferrer">
+            <img src="./images/banner3_1burger_1x.jpg" class="pc" alt="humBerger1">
+            <img src="./images/banner3_3burger_2x.jpg" class="sp" alt="humBerger1">
+          </a>
           <h5 class="font">激旨バーガー</h5>
         </div>
+
         <div class="style">
-          <img src="./images/banner4_1burger2_1x.jpg" class="pc" alt="humberger2">
-          <img src="./images/banner4_3burger2_2x.jpg" class="sp" alt="humberger2">
+          <a href="works_all.html" target="_blank" rel="noopener noreferrer">
+            <img src="./images/banner4_1burger2_1x.jpg" class="pc" alt="humBerger2">
+            <img src="./images/banner4_3burger2_2x.jpg" class="sp" alt="humBerger2">
+          </a>
           <h5 class="font">激旨バーガー</h5>
         </div>
       </div>
       <div class="view">
-        <a href="#" class="btnlinestretches4"><span>view more</span></a>
+        <a href="works_all.html" class="btnlinestretches4"><span>view more</span></a>
       </div>
     </section>
 
@@ -202,10 +219,10 @@
       </div>
       <div class="contact_text">
         <p>ご興味をお持ちくださりありがとうございます。<br>ご依頼やご相談等ございましたら<br>お気軽にお問い合わせください。</p>
-        <button type="button" onclick="window.open='contact.html'" class="contact_btn">お問い合わせはこちらから</button>
-        <!-- <a href=".//contact.html" class="contact_btn">お問い合わせはこちらから</a> -->
-
       </div>
+
+      <button onclick="location.href='contact.html'" class="contact_btn">お問い合わせはこちらから</button>
+
       <div class="contact_img_area">
         <img src="./images/flower1_pc.png" alt="花びら1" class="hanabira1">
         <img src="./images/flower2_pc.png" alt="花びら2" class="hanabira2">
@@ -216,10 +233,10 @@
   <footer>
     <nav class="footer_nav_pc">
       <ul>
-        <li><a href="#index.html">Home</a></li>
-        <li><a href="#about.html">About</a></li>
-        <li><a href="#works.html">Works</a></li>
-        <li><a href="#contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#works">Works</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul>
       <ul class="sns">
         <li>
@@ -244,7 +261,8 @@
         $('.sp_btn').toggleClass('open');
         $('.sp_nav').fadeToggle();
       })
-      $('.contact_btn').on('click', function () {
+      $('#contact_btn').on('click', function () {
+        // window.location.html = 'contact.html';
       })
     });
   </script>

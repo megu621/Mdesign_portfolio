@@ -31,6 +31,7 @@ body {
 /* ulにgap? */
 .pc_nav ul {
   display: flex;
+  align-items: center;
   gap: 46px;
 }
 
@@ -132,14 +133,14 @@ section {
 .works_btn_box {
   display: flex;
   justify-content: space-around;
-  gap: 5px;
-  margin: 50px 0;
+  /* gap: 5px; */
+  margin: 50px auto;
 }
 
 .works_btn_box a {
   /* width: 64px; */
   width: 20%;
-  padding: 8px 32px;
+  padding: 8px 0;
   border-radius: 20px;
   color: #FBFBFD;
   background: #D4ADA2;
@@ -147,6 +148,7 @@ section {
   font-size: 16px;
   display: inline-block;
   text-align: center;
+  /* box-sizing: border-box; */
 }
 
 .works_img_area {
@@ -156,6 +158,7 @@ section {
   margin: 50px auto;
 }
 
+
 .works_img_area .style {
   border: 1px solid #D4ADA2;
   width: 30%;
@@ -164,12 +167,14 @@ section {
   margin: 55px auto;
   box-sizing: border-box;
   display: inline-block;
-
+  display: flex;
+  justify-content: center;
 }
 
 .style {
   max-width: 100%;
   position: relative;
+  cursor: pointer;
 }
 
 .style img {
@@ -199,6 +204,12 @@ h5 {
 
 }
 
+#contact {
+  position: relative;
+  text-align: center;
+
+}
+
 .contact_text {
   text-align: center;
   margin: 50px auto;
@@ -210,32 +221,30 @@ h5 {
 
 .contact_btn {
   background: #D4ADA2;
+  display: inline-block;
   border-radius: 50px;
   padding: 18px 80px;
   color: #FBFBFD;
-  margin: 64px 0 256px;
+  /* margin: 50px auto; */
   border: none;
   cursor: pointer;
 }
 
-.contact_text a {
+/* .contact_text button {
   display: inline-block;
   margin-top: 64px;
-}
+} */
 
-#contact {
-  position: relative;
-}
 
 .hanabira1 {
   position: absolute;
-  top: -30%;
+  top: -60%;
   left: 5%;
 }
 
 .hanabira2 {
   position: absolute;
-  top: 40%;
+  top: 20%;
   right: 5%;
 }
 
@@ -247,7 +256,7 @@ footer {
 }
 
 .footer_nav_pc {
-  padding: 176px 0;
+  padding: 100px 0;
   /* 中央にこない */
   /* text-align: center; */
   max-width: 100%;
@@ -292,7 +301,7 @@ footer {
     /*線の基点とするためrelativeを指定*/
 	position:relative;
     /*リンクの形状*/ 
-	color:#333;
+	color:#3F2518;
     padding: 10px 50px 10px 30px;
 	display:inline-block;
     text-decoration: none;
@@ -309,7 +318,7 @@ footer {
 	bottom:0;
 	left:0;
      /*線の形状*/   
-	background:#333;
+	background:#3F2518;
 	width:100%;
 	height:2px;
     /*アニメーションの指定*/
@@ -319,7 +328,7 @@ footer {
  /*hover時に伸びる線の形状*/   
 .btnlinestretches4::after{
 	width:0;
-	background:#ccc;
+	background:#D4ADA2;
 }
 
  /*hover時に100%に伸びる*/   
@@ -332,7 +341,7 @@ footer {
     content: '';
     /*絶対配置で矢印の位置を決める*/
     position: absolute;
-    top: 1em;
+    top: 14px;
     right: 20px;
     /* 円 */
     width: 10px;
@@ -360,6 +369,10 @@ footer {
   background: #3F2518;
 }
 
+.btnlinestreches4:hover span::after {
+  color: #D4ADA2;
+}
+
 .btnlinestretches4 
 .btnlinestretches4 span::after
 .btnlinestretches4 span::before {
@@ -368,6 +381,7 @@ footer {
 /*hover時に矢印が移動*/   
 .btnlinestretches4:hover span::after {
 	right:15px;
+  background: #D4ADA2;
 }
 /* 右に寄せる */
 .view {
@@ -455,6 +469,7 @@ footer {
 /* works_website1_page */
 .wrapper {
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .website1_style {
@@ -469,7 +484,8 @@ footer {
 }
 
 .works_title {
-  margin: 108px auto 16px;
+  /* margin: 108px auto 16px; */
+  margin: 108px auto;
 }
 
 th {
@@ -534,10 +550,17 @@ td {
   border-radius: 50px;
   padding: 18px 0;
   color: #FBFBFD;
-  margin-bottom: 256px;
-
+  /* margin-bottom: 100px; */
 }
 
+button[type="submit"] {
+  border: none;
+  background: none;
+    font-family: "zen-kaku-gothic-new", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: #FDF7FA;
+}
 /* .form_area {
   max-width: 1000px;
 } */
@@ -545,7 +568,7 @@ td {
 .form_box {
   width: 100%;
   display: flex;
-  gap: 30px;
+  gap: 50px;
 }
 
 .form {
@@ -556,9 +579,10 @@ td {
   width: 100%;
   margin-top: 10px;
   margin-bottom: 30px;
-  padding: 12px 0 12px 12px;
+  padding: 12px;
   border: 1px solid #D4ADA2;
   border-radius: 5px;
+  box-sizing: border-box;
 }
 
 
@@ -566,8 +590,13 @@ td {
   width: 100%;
 }
 
-.form_box2 .form input {
+.form_box2 textarea {
+  width: 100%;
   padding: 12px 0 277px 12px;
+  border: 1px solid #D4ADA2;
+  border-radius: 5px;
+  box-sizing: border-box;
+  margin-top: 10px;
 }
 
 .form_box .form label,
@@ -579,7 +608,7 @@ td {
 }
 
 .form_box .form input,
-.form_box2 .form input {
+.form_box2 .form textarea{
   font-family: "zen-kaku-gothic-new", sans-serif;
   font-weight: 400;
   font-size: 16px;
@@ -609,15 +638,16 @@ td {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1100px) {
   .page_header {
     margin-top: 100px auto 0;
+    padding: 0;
   }
 
 
   section {
   max-width: 1000px;
-  padding: 0 5%;
+  padding: 5%;
   margin: 100px auto 0;
 }
 
@@ -629,6 +659,10 @@ td {
   }
   
   /* 画像が出ない */
+  .sp {
+  display: block;
+}
+
   .works_img_area .style {
     width: 100%;
     height: none;
@@ -639,7 +673,11 @@ td {
   }
 
   h5 {
-    top: 100%;
+    top: 96%;
+  }
+
+  .font {
+    top: 98%;
   }
 
   .img_line {
@@ -653,6 +691,11 @@ td {
   .contact_btn {
       margin-bottom: 0;
   }
+
+  .contact_btn2 {
+    margin-bottom: 50px;
+  }
+
   .footer_nav_pc {
     padding: 160px 0;
   }
@@ -782,7 +825,7 @@ td {
 }
 
 @media screen and (max-width: 767px) {
-  .mainvisual img {
+  .mainVisual img {
     height: auto;
     max-width: 100%;
   }
@@ -792,7 +835,7 @@ td {
     margin: 0 auto;
   }
 
-    .logo img {
+  .logo img {
     width: 120px;
   }
 
@@ -815,6 +858,9 @@ td {
     display: none;
   }
 
+  .works_btn_box a {
+    font-size: 14px;
+  }
 
 /* about_page */
   .skill_container {
@@ -828,6 +874,7 @@ td {
   /* contact_page */
   .form_box {
     flex-direction: column;
+    gap: 0;
   }
 
   .form {
@@ -842,4 +889,5 @@ td {
   .form_box > form:nth-child(2) {
     order: 3;
   }
+}
 }
