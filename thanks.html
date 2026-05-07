@@ -9,6 +9,8 @@
 
   <link rel="stylesheet" href="https://use.typekit.net/yih6jum.css">
   <link rel="stylesheet" href="https://use.typekit.net/yih6jum.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
   <script>
     (function (d) {
       var config = {
@@ -97,7 +99,7 @@
 
     <nav class="sp_nav">
       <ul>
-        <li><a href="images/"></a>Home</li>
+        <li><a href="index.html"></a>Home</li>
         <li><a href="about.html"></a>About</li>
         <li><a href="works_all.html"></a>Works</li>
         <li><a href="contact.html"></a>Contact</li>
@@ -125,10 +127,10 @@
   <footer>
     <nav class="footer_nav_pc">
       <ul>
-        <li><a href="#index.html">Home</a></li>
-        <li><a href="#about.html">About</a></li>
-        <li><a href="#works.html">Works</a></li>
-        <li><a href="#contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="works.html">Works</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
       <ul class="sns">
         <li>
@@ -146,6 +148,19 @@
     <img src="./images/wavy2_footer_pc.svg" alt="波線" class="footer_img">
     <p class="copyright">@2025 Portfolio M design</p>
   </footer>
+
+    <script>
+    $(function () {
+      $('.sp_btn').on('click', function () {
+        $('.sp_btn').toggleClass('open');
+        $('.sp_nav').fadeToggle();
+      })
+      $('#contact_btn').on('click', function () {
+        // window.location.html = 'contact.html';
+      })
+    });
+  </script>
+
 </body>
 
 </html>
